@@ -19,3 +19,9 @@ filetype plugin indent on    " required
 syntax on
 let g:airline_theme='base16_spacemacs'
 colorscheme archery
+
+
+"sudo apt-get install exuberant-ctags
+"in project folder run
+"ctags -R --exclude=.git .
+"we now have the goto definition
