@@ -12,15 +12,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'valloric/youcompleteme'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'Heorhiy/VisualStudioDark.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme VisualStudioDark
 let g:airline_theme='base16_spacemacs'
 
 "sudo apt-get install exuberant-ctags
