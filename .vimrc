@@ -20,7 +20,7 @@ filetype plugin indent on    " required
 set termguicolors
 syntax enable
 colorscheme archery
-let g:airline_theme='base16_spacemacs'
+let g:airline_theme='archery'
 
 "sudo apt-get install exuberant-ctags
 "in project folder run
