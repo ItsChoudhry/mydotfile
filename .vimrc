@@ -22,6 +22,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 nnoremap <f2> :NERDTreeToggle<Enter>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
