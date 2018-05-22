@@ -18,6 +18,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,9 +37,10 @@ let g:ctrlp_cmd = 'CtrlP'
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-let g:ycm_global_ycm_extra_conf = 'C:/Users/choudhry.amjad/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:solarized_termcolors=256
 
 set backspace=indent,eol,start
 syntax enable on
@@ -46,6 +48,19 @@ set background=dark
 colorscheme solarized
 let g:airline_theme='solarized'
 set encoding=utf-8
+set autochdir
+set term=screen-256color
+
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=4    " Indents will have a width of 4
+
+set softtabstop=4   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
 
 "install exuberant-ctags
 "in project folder run
