@@ -1,14 +1,21 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/choudhry/.oh-my-zsh
-  export TERM="xterm-256color"
+  export ZSH="/home/choudhry/.oh-my-zsh"
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='awesome-fontconfig'
+eval `dircolors ~/.solarized/dircolors.ansi-dark`
+DEFAULT_USER=`whoami`
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator command_execution_time status time)
+
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -49,7 +56,10 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
@@ -61,12 +71,30 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  autojump
+  z
+  command-not-found
+  python
+  pip
+  zsh-syntax-highlighting
+  colored-man-pages
+  colorize
+  cp
+  web-search
+  gnu-utils
+  jira
+  alias-tips
+  pyfind
+  pyclean
+  pygrep
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.fonts/*.sh
+# Other sourcing comes directly from $ZSH_CUSTOM/*.zsh
 
 # User configuration
+export ZSH_PLUGINS_ALIAS_TIPS_FORCE=1
+export ZSH_PLUGINS_ALIAS_TIPS_REVEAL=1
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -85,24 +113,3 @@ source ~/.fonts/*.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export NVM_DIR="/home/choudhry/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$HOME/anaconda3/bin:$PATH"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="white"
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND="black"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator command_execution_time status time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs anaconda)
