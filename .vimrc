@@ -1,71 +1,53 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set number
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/vim-emoji'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-surround'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/.vim/bundle/Vundle.vim/
-call vundle#begin('$HOME/.vim/bundle/')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-"Plugin 'neilpa/cmd-colors-solarized' for windows terminal colors
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'valloric/youcompleteme'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'majutsushi/tagbar'
+map <C-f> :FZF<CR>
+nmap <leader>y ggVG"+y''
+autocmd filetype python nnoremap <F5> :w <bar> !python % <CR>
+autocmd filetype cpp nnoremap <F5> :w<CR>:!printf "\033c" && printf "================\n  Compiling...\n================\n" && time g++ -g -std=c++17 -Wall -Wextra -Wno-unused-result -D LOCAL -O2 %:r.cpp -o %:r 2>&1 \| tee %:r.cerr && printf "\n================\n   Running...\n================\n" && time ./%:r && printf "\n\n\n\n"<CR>
+autocmd filetype c nnoremap <F5> :w<CR>:!printf "\033c" && printf "================\n  Compiling...\n================\n" && time gcc % -o %< && printf "\n================\n   Running...\n================\n" && time ./%< <CR>
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+nnoremap <c-j> <c-w>j 
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
-nnoremap <f2> :NERDTreeToggle<Enter>
-nnoremap <f3> :TagbarToggle<CR>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:solarized_termcolors=256
-
-set backspace=indent,eol,start
-syntax enable on
-set background=dark
-colorscheme solarized
-let g:airline_theme='solarized'
-set encoding=utf-8
-set autochdir
-set term=screen-256color
-
-set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
-
-set shiftwidth=4    " Indents will have a width of 4
-
-set softtabstop=4   " Sets the number of columns for a TAB
-
-set expandtab       " Expand TABs to spaces
-
+filetype off
+filetype plugin indent on
+syntax on
+set nu
 set clipboard=unnamedplus
-"install exuberant-ctags
-"in project folder run
-"ctags -R --exclude=.git .
-"we now have the goto definition
+set mouse=a
+set tabstop=2
+set autoindent
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set expandtab
+set smartcase
+set directory-=.   
+set t_Co=256
+set number
+set ruler
+set background=dark
+set encoding=utf-8
+set wildmenu
+nmap <F2> :NERDTreeToggle<CR>
+let g:NERDSpaceDelims=1
+let g:NERDTreeMinimalUI=2
+let g:NERDTreeWinSize=25
+let NERDTreeIgnore=['\.pyc$']
+let NERDTreeIgnore=['\.swp$']
+let NERDTreeShowHidden=1
+let g:airline_theme = "solarized"
