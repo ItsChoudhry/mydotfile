@@ -1,14 +1,15 @@
+export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/anaconda3/bin:$PATH 
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/choudhry/.oh-my-zsh"
+  export ZSH="/home/itschoudhry/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
-eval `dircolors ~/.solarized/dircolors.ansi-dark`
 DEFAULT_USER=`whoami`
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -113,3 +114,5 @@ export ZSH_PLUGINS_ALIAS_TIPS_REVEAL=1
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
