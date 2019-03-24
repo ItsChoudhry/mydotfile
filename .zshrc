@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 export PATH=~/anaconda3/bin:$PATH 
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/itschoudhry/.oh-my-zsh"
+  export ZSH="/home/manjaro/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -12,11 +12,12 @@ export PATH=~/anaconda3/bin:$PATH
 ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER=`whoami`
 
+POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator command_execution_time status time)
-
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -88,6 +89,7 @@ plugins=(
   pyfind
   pyclean
   pygrep
+  anaconda
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,3 +118,19 @@ export ZSH_PLUGINS_ALIAS_TIPS_REVEAL=1
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/manjaro/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/manjaro/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/manjaro/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/manjaro/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
