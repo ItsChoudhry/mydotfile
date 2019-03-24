@@ -10,4 +10,5 @@
 alias mntrpi="/home/choudhry/repos/dev/qt-tools/scripts/mountRPi.sh"
 alias bat="bat --paging=never"
 alias cat="bat"
-
+alias tfon="conda activate tensorflow"
+alias envoff="conda deactivate"
