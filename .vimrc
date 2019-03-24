@@ -1,4 +1,4 @@
-	call plug#begin()
+call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-emoji'
@@ -23,6 +23,11 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+nnoremap <silent> vv :vsplit
+nnoremap <silent> hh :split
+
+set splitbelow
+set splitright
 
 filetype off
 filetype plugin indent on
