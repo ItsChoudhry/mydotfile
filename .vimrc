@@ -1,4 +1,4 @@
-call plug#begin()
+	call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-emoji'
@@ -9,6 +9,7 @@ Plug 'tpope/vim-surround'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 
@@ -36,7 +37,7 @@ set softtabstop=2
 set smarttab
 set expandtab
 set smartcase
-set directory-=.   
+set directory-=.
 set t_Co=256
 set number
 set ruler
@@ -51,3 +52,4 @@ let NERDTreeIgnore=['\.pyc$']
 let NERDTreeIgnore=['\.swp$']
 let NERDTreeShowHidden=1
 let g:airline_theme = "solarized"
+set viminfo+=n~/tmp/viminfo
