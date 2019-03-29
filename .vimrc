@@ -58,3 +58,4 @@ let NERDTreeIgnore=['\.swp$']
 let NERDTreeShowHidden=1
 let g:airline_theme = "solarized"
 set viminfo+=n~/tmp/viminfo
+
