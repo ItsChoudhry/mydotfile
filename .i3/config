@@ -43,10 +43,10 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -63,7 +63,6 @@ bindsym $mod+F3 exec termite -e ranger
 bindsym $mod+F4 [class="Spotify"] scratchpad show
 bindsym $mod+F5 [class="discord"] scratchpad show
 bindsym $mod+F6 [class="obs"] scratchpad show
-bindsym $mod+F7 [class="pavucontrol"] scratchpad show
 
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
@@ -92,8 +91,6 @@ for_window [instance="TODO"] border pixel 2
 for_window [class="Spotify"] move scratchpad
 for_window [class="discord"] move scratchpad
 for_window [class="obs"] move scratchpad
-for_window [class="pavucontrol"] move scratchpad
-
 # focus_follows_mouse no
 
 # change focus
@@ -234,7 +231,6 @@ for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
-for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
@@ -247,7 +243,6 @@ for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="Spotify"] floating enable
 for_window [class="discord"] floating enable
 for_window [class="obs"] floating enable
-for_window [class="pavucontrol"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -318,7 +313,6 @@ exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id spotify
 exec --no-startup-id apulse com.discordapp.Discord
 exec --no-startup-id obs
-exec --no-startup-id pavucontrol
 exec --no-startup-id termite --name "notes" -e "zsh -c vim\ ~/notes"
 exec --no-startup-id termite --name "TODO" -e "zsh -c vim\ ~/TODO"
 
