@@ -58,7 +58,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 bindsym $mod+F1 [instance="notes"] scratchpad show; [instance="notes"] move position center;
 bindsym $mod+Shift+F1 [instance="TODO"] scratchpad show; [instance="TODO"] move position center;
-bindsym $mod+F2 exec chromium
+bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec termite -e ranger
 bindsym $mod+F4 [class="Spotify"] scratchpad show
 bindsym $mod+F5 [class="discord"] scratchpad show
