@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-commentary' "gc to comment ez
+Plug 'tell-k/vim-autopep8'
 call plug#end()
 
 
@@ -59,13 +60,12 @@ let NERDTreeShowHidden=1
 let g:airline_theme = "solarized"
 set viminfo+=n~/tmp/viminfo
 
-
 let g:clang_format#style_options = {
             \ "AccessModifierOffset" : -4,
             \ "AllowShortIfStatementsOnASingleLine" : "true",
             \ "AlwaysBreakTemplateDeclarations" : "true",
             \ "Standard" : "C++11",
             \ "BreakBeforeBraces" : "Stroustrup"}
-
-
 let g:clang_format#auto_format=1
+
+let g:autopep8_on_save = 1
