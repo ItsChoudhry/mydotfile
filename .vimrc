@@ -14,17 +14,11 @@ call plug#end()
 
 
 map <C-f> :FZF<CR>
-nmap <leader>y ggVG"+y''
-autocmd filetype python nnoremap <F5> :w <bar> !python % <CR>
-autocmd filetype cpp nnoremap <F5> :w<CR>:!printf "\033c" && printf "================\n  Compiling...\n================\n" && time g++ -g -std=c++17 -Wall -Wextra -Wno-unused-result -D LOCAL -O2 %:r.cpp -o %:r 2>&1 \| tee %:r.cerr && printf "\n================\n   Running...\n================\n" && time ./%:r && printf "\n\n\n\n"<CR>
-autocmd filetype c nnoremap <F5> :w<CR>:!printf "\033c" && printf "================\n  Compiling...\n================\n" && time gcc % -o %< && printf "\n================\n   Running...\n================\n" && time ./%< <CR>
-
 nnoremap <c-j> <c-w>j 
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <silent> vv :vsplit
-nnoremap <silent> hh :split
+autocmd InsertEnter * :let @/=""
 
 set splitbelow
 set splitright
@@ -47,6 +41,7 @@ set t_Co=256
 set number
 set ai
 set hlsearch
+
 highlight Comment ctermfg=green
 set ruler
 set background=dark
