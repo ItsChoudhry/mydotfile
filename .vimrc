@@ -45,6 +45,9 @@ set smartcase
 set directory-=.
 set t_Co=256
 set number
+set ai
+set hlsearch
+highlight Comment ctermfg=green
 set ruler
 set background=dark
 set encoding=utf-8
