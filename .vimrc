@@ -11,7 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'rhysd/vim-clang-format'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary' "gc to comment ez
 call plug#end()
 
 
