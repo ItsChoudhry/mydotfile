@@ -1,7 +1,7 @@
 export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/opt/anaconda/bin:$PATH 
+# export PATH="/home/choudhry/anaconda3/bin:$PATH" 
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/choudhry/.oh-my-zsh"
@@ -86,10 +86,6 @@ plugins=(
   gnu-utils
   jira
   alias-tips
-  pyfind
-  pyclean
-  pygrep
-  anaconda
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,14 +117,14 @@ export ZSH_PLUGINS_ALIAS_TIPS_REVEAL=1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/choudhry/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda/etc/profile.d/conda.sh"
+    if [ -f "/home/choudhry/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/choudhry/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/anaconda/bin:$PATH"
+        export PATH="/home/choudhry/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
