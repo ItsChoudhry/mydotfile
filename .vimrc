@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-emoji'
 Plug 'mileszs/ack.vim'
