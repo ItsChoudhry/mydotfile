@@ -9,7 +9,7 @@ export TERM="xterm-256color"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER=`whoami`
 
 POWERLEVEL9K_MODE='awesome-fontconfig'
@@ -72,20 +72,20 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  autojump
-  z
-  command-not-found
-  python
-  pip
-  zsh-syntax-highlighting
-  colored-man-pages
-  colorize
-  cp
-  web-search
-  gnu-utils
-  jira
   alias-tips
+  git
+#   autojump
+#   z
+#   command-not-found
+#   python
+#   pip
+#   zsh-syntax-highlighting
+#   colored-man-pages
+#   colorize
+#   cp
+#   web-search
+#   gnu-utils
+#   jira
 )
 
 source $ZSH/oh-my-zsh.sh
