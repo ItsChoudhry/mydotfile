@@ -74,18 +74,18 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
 plugins=(
   alias-tips
   git
-#   autojump
-#   z
-#   command-not-found
-#   python
-#   pip
-#   zsh-syntax-highlighting
-#   colored-man-pages
-#   colorize
-#   cp
-#   web-search
-#   gnu-utils
-#   jira
+  autojump
+  z
+  command-not-found
+  python
+  pip
+  zsh-syntax-highlighting
+  colored-man-pages
+  colorize
+  cp
+  web-search
+  gnu-utils
+  jira
 )
 
 source $ZSH/oh-my-zsh.sh
