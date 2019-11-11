@@ -23,8 +23,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <silent> <C-W>v :vsplit
-nnoremap <silent> <C-W>h :split
 
 set splitbelow
 set splitright
