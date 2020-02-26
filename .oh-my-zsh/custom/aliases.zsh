@@ -8,8 +8,6 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias mntrpi="/home/choudhry/repos/dev/qt-tools/scripts/mountRPi.sh"
-alias tfon="conda activate tensorflow"
-alias envoff="conda deactivate"
 alias lab="jupyter lab --no-browser"
 alias ipy="ipython"
 alias upgrade="sudo apt update && sudo apt upgrade"
