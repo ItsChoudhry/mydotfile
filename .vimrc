@@ -13,9 +13,25 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'pboettch/vim-cmake-syntax'
-
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 call plug#end()
+call glaive#Install()
 
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  autocmd FileType vue AutoFormatBuffer prettier
+augroup END
 
 map <C-f> :FZF<CR>
 nnoremap <c-j> <c-w>j 
