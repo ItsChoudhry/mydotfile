@@ -1,3 +1,5 @@
+".vimrc -> /.config/nvim/init.vim for nvim
+
 call plug#begin()
 "Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -16,6 +18,7 @@ Plug 'pboettch/vim-cmake-syntax'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'ycm-core/YouCompleteMe' " ~/.config/nvim/plugged/YouCompleteMe
 call plug#end()
 call glaive#Install()
 
