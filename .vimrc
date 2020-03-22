@@ -19,7 +19,10 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'ycm-core/YouCompleteMe' " ~/.config/nvim/plugged/YouCompleteMe
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 call plug#end()
+
 call glaive#Install()
 
 augroup autoformat_settings
@@ -74,4 +77,7 @@ let NERDTreeIgnore=['\.swp$']
 let NERDTreeShowHidden=1
 let g:airline_theme = "solarized"
 set viminfo+=n~/tmp/viminfo
-
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
