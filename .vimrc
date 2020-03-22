@@ -10,24 +10,23 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
+Plug 'preservim/nerdcommenter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'pboettch/vim-cmake-syntax'
+
 call plug#end()
 
 
 map <C-f> :FZF<CR>
-nmap <leader>y ggVG"+y''
-autocmd filetype python nnoremap <F5> :w <bar> !python % <CR>
-autocmd filetype cpp nnoremap <F5> :w<CR>:!printf "\033c" && printf "================\n  Compiling...\n================\n" && time g++ -g -std=c++17 -Wall -Wextra -Wno-unused-result -D LOCAL -O2 %:r.cpp -o %:r 2>&1 \| tee %:r.cerr && printf "\n================\n   Running...\n================\n" && time ./%:r && printf "\n\n\n\n"<CR>
-autocmd filetype c nnoremap <F5> :w<CR>:!printf "\033c" && printf "================\n  Compiling...\n================\n" && time gcc % -o %< && printf "\n================\n   Running...\n================\n" && time ./%< <CR>
-
 nnoremap <c-j> <c-w>j 
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+map <C-_> :call NERDComment(0, "toggle")<CR>
 
 set splitbelow
 set splitright
 
-filetype off
 filetype plugin indent on
 syntax on
 set nu
