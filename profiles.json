@@ -13,9 +13,21 @@
             // Make changes here to the powershell.exe profile
             "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "name": "Windows PowerShell",
+            "commandline": "powershell.exe",
+	    "colorScheme" : "Solarized Dark",
+	    "fontFace": "consolas NF",
+	    "startingDirectory": null,
+            "fontSize": 11,
+            "hidden": false
+        },
+	{
+            // Make changes here to the powershell.exe profile
+            "guid": "{1a15b0fd-298f-46af-bcc7-a8421ebfa48a}",
+            "name": "DevShell",
             "commandline": "powershell.exe -noe -c \"&{Import-Module \"\"\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/Microsoft.VisualStudio.DevShell.dll\"\"\"; Enter-VsDevShell 1a50ff30}\"",
 	    "colorScheme" : "Solarized Dark",
 	    "fontFace": "consolas NF",
+	    "startingDirectory": null,
             "fontSize": 11,
             "hidden": false
         },
@@ -32,6 +44,7 @@
             "name": "Ubuntu-18.04",
             "source": "Windows.Terminal.Wsl",
 	    "fontFace": "consolas NF",
+            "colorScheme" : "Solarized Dark",
 	    "startingDirectory": null,
             "fontSize": 11
         },
