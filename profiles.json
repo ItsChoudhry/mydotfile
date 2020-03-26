@@ -57,7 +57,27 @@
     ],
 
     // Add custom color schemes to this array
-    "schemes": [],
+    "schemes": [{
+            "name": "Solarized Dark",
+            "foreground": "#839496",
+            "background": "#002B36",
+            "black": "#073642",
+            "red": "#DC322F",
+            "green": "#859900",
+            "yellow": "#B58900",
+            "blue": "#268BD2",
+            "purple": "#D33682",
+            "cyan": "#2AA198",
+            "white": "#EEE8D5",
+            "brightBlack": "#839496",
+            "brightRed": "#CB4B16",
+            "brightGreen": "#586E75",
+            "brightYellow": "#657B83",
+            "brightBlue": "#839496",
+            "brightPurple": "#6C71C4",
+            "brightCyan": "#93A1A1",
+            "brightWhite": "#FDF6E3"
+        }],
 
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
