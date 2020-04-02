@@ -38,6 +38,7 @@ set number
 set ruler
 set ai
 :highlight Comment ctermfg=green
+set background=dark
 
 nmap <F2> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims=1
