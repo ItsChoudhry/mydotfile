@@ -1,16 +1,10 @@
 ".vimrc -> /.config/nvim/init.vim for nvim
 
 call plug#begin()
-"Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/vim-emoji'
-Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
@@ -75,7 +69,6 @@ let g:NERDTreeWinSize=25
 let NERDTreeIgnore=['\.pyc$']
 let NERDTreeIgnore=['\.swp$']
 let NERDTreeShowHidden=1
-let g:airline_theme = "solarized"
 set viminfo+=n~/tmp/viminfo
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
