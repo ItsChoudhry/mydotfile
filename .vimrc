@@ -13,7 +13,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'ycm-core/YouCompleteMe' " ~/.config/nvim/plugged/YouCompleteMe
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 call plug#end()
 
@@ -33,44 +32,25 @@ augroup autoformat_settings
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
 
-map <C-f> :FZF<CR>
 nnoremap <c-j> <c-w>j 
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 map <C-_> :call NERDComment(0, "toggle")<CR>
 
-set splitbelow
-set splitright
-
 filetype plugin indent on
 syntax on
-set nu
-set clipboard=unnamedplus
-set mouse=a
 set tabstop=2
-set autoindent
 set shiftwidth=2
-set softtabstop=2
-set smarttab
 set expandtab
-set smartcase
-set directory-=.
-set t_Co=256
 set number
 set ruler
-set background=dark
-set encoding=utf-8
-set wildmenu
+set ai
+set hlsearch
+:highlight Comment ctermfg=green
+
 nmap <F2> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims=1
 let g:NERDTreeMinimalUI=2
 let g:NERDTreeWinSize=25
-let NERDTreeIgnore=['\.pyc$']
-let NERDTreeIgnore=['\.swp$']
 let NERDTreeShowHidden=1
-set viminfo+=n~/tmp/viminfo
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
