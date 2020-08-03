@@ -92,10 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # Other sourcing comes directly from $ZSH_CUSTOM/*.zsh
 
 # User configuration
-export ZSH_PLUGINS_ALIAS_TIPS_FORCE=1
+# export ZSH_PLUGINS_ALIAS_TIPS_FORCE=1
 export ZSH_PLUGINS_ALIAS_TIPS_REVEAL=1
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:/home/choudhry/repos/flutter/bin"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
