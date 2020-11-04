@@ -1,7 +1,6 @@
 ".vimrc -> /.config/nvim/init.vim for nvim
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'google/vim-maktaba'
@@ -25,7 +24,6 @@ set shiftwidth=2
 set expandtab
 set ai
 set number
-set relativenumber
 set hlsearch
 set ruler
 set splitbelow
@@ -39,10 +37,7 @@ nmap <Leader>F :Files<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>f :Ag<CR>
 
-map <F1> :NERDTreeToggle<CR>
-map <F2> :NERDTreeFind<CR>
 map <C-_> :call NERDComment(0, "toggle")<CR>
-let NERDTreeShowHidden=1
 
 let g:coc_global_extensions = [ 'coc-python', 
   \ 'coc-pairs',
